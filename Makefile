@@ -1,0 +1,14 @@
+#OBJS specifies which files to compile as part of the project
+OBJS = main.cpp
+
+#OBJ_NAME specifies the name of our exectuable
+OBJ_NAME = hw01
+
+#This is the target that compiles our executable
+all : $(OBJ_NAME)
+
+$(OBJ_NAME): $(OBJS)
+	g++ $(OBJS) -w -lSDL2 -lGL -lSDL2_image -o $(OBJ_NAME)
+
+clean:
+	rm -f $(OBJ_NAME)
